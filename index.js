@@ -15,8 +15,8 @@ const loadDataFronJsonFile = () => {
     const loadCountHome = fs.readFileSync(pathHome, 'utf-8');
     const loadCountAbout = fs.readFileSync(pathAbout, 'utf-8');
 
-    countHome = JSON.parse(loadCountHome).count || 0;
-    countAbout = JSON.parse(loadCountAbout).count || 0;
+    countHome = JSON.parse(loadCountHome).value || 0;
+    countAbout = JSON.parse(loadCountAbout).value || 0;
     } catch(error) {
         console.error(error.message);
     }
